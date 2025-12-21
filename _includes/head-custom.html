@@ -1,1 +1,39 @@
+<!-- Custom CSS -->
 <link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+
+<!-- KaTeX CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  integrity="sha384-n8MVd4RsNIU0tAvzTn7+gkY9O+V1YxDCEV4VpWwfvZP5c5Ny8JD7BqXc9Ejo4kKD"
+  crossorigin="anonymous"
+>
+
+<!-- KaTeX JS -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+  integrity="sha384-7zk1lZ5G7z8rT+6zYcI2Yd6SmHgwlHGawEq+y3OCAXoTr4Wr9PXgC7cmk6Vw567z"
+  crossorigin="anonymous"
+></script>
+
+<!-- KaTeX auto-render -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  integrity="sha384-mll67QQG6sCkCMu2wZL8SaJIs/VIVqVdPXge8GkVUvxRsm4DtE6tvwFFGcOsKctv"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\[", right: "\\]", display: true },
+        { left: "\\(", right: "\\)", display: false }
+      ],
+      throwOnError: false
+    });
+  });
+</script>
