@@ -20,16 +20,17 @@ An MLP is a composition of affine transformations and nonlinearities.
 
 For a single hidden-layer MLP:
 
-\[
+$$
 \mathbf{h} = \sigma(\mathbf{W}_1 \mathbf{x} + \mathbf{b}_1)
-\]
-\[
+$$
+
+$$
 \hat{\mathbf{y}} = \mathbf{W}_2 \mathbf{h} + \mathbf{b}_2
-\]
+$$
 
 Where:
-- \(\mathbf{x} \in \mathbb{R}^d\) is the input
-- \(\sigma\) is a nonlinear activation (e.g. ReLU)
+- $\mathbf{x} \in \mathbb{R}^d$ is the input
+- $\sigma$ is a nonlinear activation (e.g. ReLU)
 - Parameters are learned via gradient descent
 
 This structure is **fully connected**.
@@ -58,7 +59,7 @@ class MLP:
         self.h = self.relu(self.z1)
         self.out = self.h @ self.W2 + self.b2
         return self.out
-```
+````
 
 This is the **purest form** of an MLP:
 
@@ -70,13 +71,13 @@ This is the **purest form** of an MLP:
 
 ## Applying an MLP to Images
 
-Suppose we take a grayscale image of size (28 \times 28).
+Suppose we take a grayscale image of size $(28 \times 28)$.
 
 To feed it into an MLP, we must **flatten it**:
 
-[
+$$
 \mathbf{x} \in \mathbb{R}^{784}
-]
+$$
 
 This immediately introduces problems.
 
@@ -98,7 +99,8 @@ The MLP treats:
 
 * a pixel in the corner
 * and a pixel in the center
-  as equally unrelated unless it *learns that from scratch*.
+
+as equally unrelated unless it *learns that from scratch*.
 
 ---
 
@@ -106,9 +108,9 @@ The MLP treats:
 
 For a modest hidden layer of size 512:
 
-[
+$$[
 784 \times 512 \approx 400{,}000 \text{ parameters}
-]
+]$$
 
 This is:
 
@@ -184,3 +186,6 @@ That transition will be made explicit in the next post.
 The full implementation and experiments live in:
 
 [https://github.com/ScratchMind/ScratchVision](https://github.com/ScratchMind/ScratchVision)
+
+
+---
