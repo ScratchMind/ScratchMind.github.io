@@ -1,0 +1,18 @@
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.markdown-body {
+  max-width: 900px;
+  margin: auto;
+}
+
+a {
+  color: #58a6ff;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #30363d;
+}

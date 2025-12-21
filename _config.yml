@@ -1,4 +1,10 @@
 title: ScratchMind
 description: Understanding Machine Learning by Building It From First Principles
+
 theme: jekyll-theme-hacker
 markdown: kramdown
+
+collections:
+  blogs:
+    output: true
+    permalink: /blog/:name/

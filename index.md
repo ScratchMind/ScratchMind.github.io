@@ -63,6 +63,8 @@ Blog posts and notes are linked directly from the repositories and may live as:
 - GitHub READMEs
 - External articles (Medium, GitHub Pages)
 
+→ **[Blogs](/blog)**
+
 > The code explains *how*.  
 > The writing explains *why*.
 
