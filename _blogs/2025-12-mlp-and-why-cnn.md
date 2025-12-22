@@ -2,7 +2,7 @@
 layout: post
 title: Multilayer Perceptron — and Why CNNs Were Needed
 subtitle: Why fully connected networks fail on images
-date: 2025-01-12
+date: 2025-12-22
 ---
 
 ## Introduction

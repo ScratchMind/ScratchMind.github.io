@@ -60,3 +60,56 @@ hr {
 .post-content {
   line-height: 1.7;
 }
+
+/* -------- Blog Index Tiles -------- */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.blog-tile {
+  padding: 1.75rem 1.75rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid #30363d;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.blog-tile:hover {
+  transform: translateY(-2px);
+  border-color: #58a6ff;
+}
+
+.blog-tile-title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.blog-tile-title a {
+  color: #c9d1d9;
+  text-decoration: none;
+}
+
+.blog-tile-title a:hover {
+  text-decoration: underline;
+}
+
+.blog-tile-subtitle {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #8b949e;
+}
+
+.blog-tile-meta {
+  margin-top: 1.1rem;
+  font-size: 0.85rem;
+  color: #8b949e;
+}
