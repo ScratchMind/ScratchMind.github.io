@@ -43,7 +43,7 @@ Let's dive a little deeper into MLPs
 
 ## Multi-Layer Perceptron
 
-![MLP](../assets/images/mlp.png)
+![MLP]({{ "/assets/images/mlp.png" | relative_url }})
 
 > <a href="https://www.programming-ocean.com/ai-architecutres/FFN-achitecture.php">Image Source</a>
 
