@@ -16,3 +16,47 @@ hr {
   border: 0;
   border-top: 1px solid #30363d;
 }
+
+/* -------- Post Header Tile -------- */
+
+.post-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.post-header {
+  padding: 2.5rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid #30363d;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.post-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  color: #8b949e;
+}
+
+.post-meta {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* -------- Post Content -------- */
+
+.post-content {
+  line-height: 1.7;
+}
