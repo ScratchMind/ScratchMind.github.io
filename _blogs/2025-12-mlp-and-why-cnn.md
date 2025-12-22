@@ -17,9 +17,11 @@ The primary goals of this blog is to understand:
 ## Feed Forward Network
 
 One of the fundamental topics in Deep Learning is the **Feed Forward Network**, which is a broad category of Neural Networks where information flows in only one direction.
+
 $$
 input \, layer \,-->\, hidden \, layer(s) \,-->\, output \, layer
 $$
+
 There are no cycles or loops (as in recurrent architectures)
 
 ### Topology
@@ -61,9 +63,11 @@ Crux is: Stacking linear layers **does not increase representational power**, as
 $$
 L_1(x) = W_1x + b_1
 $$
+
 $$
 L_2(L_1(x)) = W_2(W_1x + b_1) + b_2
 $$
+
 $$
 L_2(L_1(x)) = (W_2W_1)x + (W_2b_1 + b_2)
 $$
