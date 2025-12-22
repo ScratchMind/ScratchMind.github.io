@@ -3,11 +3,15 @@ layout: blog
 title: Writing
 ---
 
-# Writing
+<section class="blog-intro markdown-body">
+  <h1>Writing</h1>
 
-Long-form notes, derivations, and reflections from building machine learning systems from scratch.
+  <p>
+    Long-form notes, derivations, and reflections from building machine learning systems from scratch.
+  </p>
+</section>
 
-<div class="blog-grid">
+<section class="blog-grid">
 {% for post in site.blogs reversed %}
   <article class="blog-tile">
     <h2 class="blog-tile-title">
@@ -23,4 +27,4 @@ Long-form notes, derivations, and reflections from building machine learning sys
     </div>
   </article>
 {% endfor %}
-</div>
+</section>
