@@ -118,16 +118,16 @@ The output of an S-cell in the $k_l$-th plane of the $l$-th module is given by:
 
 $$
 u_{Sl}(k_l, n) =
-r_l , \phi\left[
+r_l \cdot \phi\left[
 \frac{
-1 + \sum_{k_{l-1}} \sum_{v \in S_l}
-a_l(k_{l-1}, v, k_l),
+1 + \sum_{k_{l-1} = 1}^{K_{l-1}} \sum_{v \in S_l}
+a_l(k_{l-1}, v, k_l) \cdot
 u_{Cl-1}(k_{l-1}, n+v)
 }{
-1 + \frac{2r_l}{1+r_l}, b_l(k_l), v_{Cl-1}(n)
+1 + \frac{2r_l}{1+r_l}, b_l(k_l) \cdot v_{Cl-1}(n)
 }
 
-* 1
+- 1
 \right]
 $$
 
@@ -164,8 +164,8 @@ v_{Cl-1}(n)
 =
 
 \sqrt{
-\sum_{k_{l-1}} \sum_{v \in S_l}
-c_{l-1}(v),
+\sum_{k_{l-1}=1}^{K_{l-1}} \sum_{v \in S_l}
+c_{l-1}(v) \cdot
 u_{Cl-1}^2(k_{l-1}, n+v)
 }
 $$
@@ -204,12 +204,12 @@ u_{Cl}(k,n)
 \psi\left[
 \frac{
 1 + \sum_{v \in D_l}
-d_l(v), u_{Sl}(k, n+v)
+d_l(v), u_{Sl}(k_l, n+v)
 }{
 1 + v_{Sl}(n)
 }
 
-* 1
+- 1
   \right]
   $$
 
@@ -294,11 +294,13 @@ The Neocognitron described above has been implemented **from scratch in PyTorch*
 
 The implementation, along with experiments and visualizations of learned feature maps and final C-layer activations, is available here:
 
-👉 **GitHub:** <a href="https://github.com/ScratchMind/ScratchVision/blob/main/src/models/Neocognitron.py">Implementation</a>
+**GitHub:** <a href="https://github.com/ScratchMind/ScratchVision/blob/main/src/models/Neocognitron.py">Implementation</a>
 
 ## TL;DR
 
-The Neocognitron (1980) was one of the first architectures to address image recognition through structure rather than brute force. By introducing local receptive fields, hierarchical feature extraction, and pooling-based translation invariance, it corrected the fundamental weaknesses of fully connected networks on images. Although it predates backpropagation and modern training methods, its architectural ideas directly laid the groundwork for convolutional neural networks.
+The Neocognitron (1980) was an early neural architecture developed to address the failure of fully connected networks on image data. Instead of flattening images, it preserved spatial structure and processed inputs through a hierarchy of locally connected layers. The model is composed of repeating S-layers and C-layers: S-layers act as local feature detectors, with each S-plane detecting the same feature at different spatial locations, while C-layers pool over these responses to introduce tolerance to shifts in position. As depth increases, receptive fields grow, spatial resolution decreases, and representations evolve from simple local features to complete patterns.
+
+Learning in the Neocognitron is unsupervised and self-organizing. For each input pattern, only a small set of representative S-cells are reinforced, forcing different planes to specialize in different features and preventing redundancy. Inhibitory mechanisms regulate activity and control selectivity, balancing robustness to noise against discrimination between similar patterns. Although it predates backpropagation and modern training methods, the Neocognitron introduced the architectural principles—local receptive fields, shared weights across space, hierarchical feature extraction, and pooling-based translation invariance—that later became central to convolutional neural networks.
 
 ## References
 
